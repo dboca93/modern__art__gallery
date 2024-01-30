@@ -136,6 +136,9 @@
             left: -60px;
             // z-index: 999; 
             overflow: hidden;
+            -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
             
           }
     

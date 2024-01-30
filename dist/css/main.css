@@ -228,6 +228,9 @@ body {
     top: 60px;
     left: -60px;
     overflow: hidden;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   body .location__main {
     width: 100%;
