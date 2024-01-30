@@ -1,0 +1,131 @@
+@media only screen and (max-width: 768px) {
+  body {
+    .hero {
+      height: auto;
+      min-height: fit-content;
+      display: block;
+      background: none;
+
+      picture {
+        height: auto;
+        width: 100%;
+        min-height: 50vh;
+
+        img {
+          height: auto;
+        }
+      }
+    }
+
+    main {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr;
+
+      .relative__title__right,
+      .relative__title__left {
+        position: static;
+      }
+
+      .relative__title__right {
+        p {
+          width: 100%;
+          padding: 4% 3%;
+          text-align: justify;
+          border-top: 1px solid silver;
+          border-bottom: 1px solid silver;
+        }
+
+        button {
+          margin-left: 2.5%;
+          margin-top: 25px;
+        }
+      }
+
+      .relative__title__left {
+        padding: 4% 3%;
+
+        h1 span {
+          font-size: clamp(52px, 5vw, 80px + 3vw);
+        }
+      }
+
+      .gallery {
+        margin: 5vh auto;
+        gap: 1vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+          "pic__1"
+          "art__1"
+          "pic__2"
+          "pic__3"
+          "art__2";
+      }
+    }
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        align-items: start;
+        padding: 25px 25px;  
+
+        a img {
+            scale: 1; 
+        }
+
+        p {
+            width: 100%;
+            text-align: start;
+            margin: 25px auto; 
+            /* research this unsert css property
+            as this can come in handy a lot.
+                        margin-inline: unset;
+            */
+        }
+
+        .social__links {
+            width: 200px;
+
+            a img {
+                scale: 1; 
+            }
+        }
+    }
+
+    .location__header  {
+      .location__btn__wrapper {
+        left: 60px; 
+      }
+    }
+
+    .location__main {
+      width: 100%;
+      padding: calc(50px + 1vw) 0;
+      height: fit-content;
+
+      section {
+      padding: 0 25px;
+      max-width: unset;
+        width: 100%; 
+        grid-template-areas: 
+        "h1__a"
+        "art__a"; 
+        grid-template-columns: 1fr;
+
+        article {
+          h2 {
+            margin: 15px 0; 
+          }
+          p:nth-child(3) {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .location__footer {
+      min-height: 260px;
+    }
+  }
+}

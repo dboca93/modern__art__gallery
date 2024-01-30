@@ -1,0 +1,604 @@
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 310px;
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  body .hero {
+    height: auto;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    display: block;
+    background: none;
+  }
+  body .hero picture {
+    height: auto;
+    width: 100%;
+    min-height: 50vh;
+  }
+  body .hero picture img {
+    height: auto;
+  }
+  body main {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+  body main .relative__title__right,
+  body main .relative__title__left {
+    position: static;
+  }
+  body main .relative__title__right p {
+    width: 100%;
+    padding: 4% 3%;
+    text-align: justify;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+  }
+  body main .relative__title__right button {
+    margin-left: 2.5%;
+    margin-top: 25px;
+  }
+  body main .relative__title__left {
+    padding: 4% 3%;
+  }
+  body main .relative__title__left h1 span {
+    font-size: clamp(52px, 5vw, 80px + 3vw);
+  }
+  body main .gallery {
+    margin: 5vh auto;
+    gap: 1vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "pic__1" "art__1" "pic__2" "pic__3" "art__2";
+  }
+  body footer {
+    height: auto;
+    flex-direction: column;
+    align-items: start;
+    padding: 25px 25px;
+  }
+  body footer a img {
+    scale: 1;
+  }
+  body footer p {
+    width: 100%;
+    text-align: start;
+    margin: 25px auto;
+    /* research this unsert css property
+    as this can come in handy a lot.
+                margin-inline: unset;
+    */
+  }
+  body footer .social__links {
+    width: 200px;
+  }
+  body footer .social__links a img {
+    scale: 1;
+  }
+  body .location__header .location__btn__wrapper {
+    left: 60px;
+  }
+  body .location__main {
+    width: 100%;
+    padding: calc(50px + 1vw) 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body .location__main section {
+    padding: 0 25px;
+    max-width: unset;
+    width: 100%;
+    grid-template-areas: "h1__a" "art__a";
+    grid-template-columns: 1fr;
+  }
+  body .location__main section article h2 {
+    margin: 15px 0;
+  }
+  body .location__main section article p:nth-child(3) {
+    margin-top: 15px;
+  }
+  body .location__footer {
+    min-height: 260px;
+  }
+}
+.hero {
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgb(21, 21, 21) 34%, rgb(255, 255, 255) 34%);
+}
+.hero picture {
+  width: 33.5%;
+  min-height: 800px;
+  height: 100%;
+}
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.relative__title__left {
+  position: absolute;
+  top: 170px;
+  right: 57%;
+  left: 23.35%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.relative__title__left h1 {
+  background: linear-gradient(90deg, #ffffff 50%, #151515 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.relative__title__left h1 span:nth-child(1) {
+  display: block;
+}
+.relative__title__left h1 span {
+  font-size: clamp(68px, 7vw, 112px + 1vw);
+  font-weight: bold;
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+
+.relative__title__right {
+  position: absolute;
+  right: calc(17.5% - 0.5vw);
+  left: calc(60% - 0.5vw);
+  top: 190.5px;
+}
+.relative__title__right p {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(12px, 3.5vw, 17px + 0.5vw);
+}
+.relative__title__right .btn {
+  margin-top: calc(40px + 1vw);
+  width: 240px;
+  height: 60px;
+  font-family: "Big Shoulders Display", sans-serif;
+  padding: 15px 10px 10px 10px;
+  font-size: 25.5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: #151515;
+  color: #ffffff;
+  letter-spacing: 3.2px;
+  font-weight: 600;
+}
+.relative__title__right .btn:hover {
+  cursor: pointer;
+}
+.relative__title__right .btn:hover span {
+  background-color: rgb(255, 207, 136);
+}
+.relative__title__right .btn span {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(213, 150, 108);
+  top: -45px;
+  right: -230px;
+  bottom: 0;
+  position: relative;
+  content: "";
+  display: block;
+}
+.relative__title__right .btn span:hover {
+  background-color: rgb(255, 207, 136);
+  cursor: pointer;
+}
+.relative__title__right .btn span::before {
+  position: absolute;
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  content: "";
+  display: block;
+  top: 10px;
+  right: 30px;
+  transform: rotate(-45deg);
+}
+.relative__title__right .btn span::after {
+  position: absolute;
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  content: "";
+  display: block;
+  top: 25px;
+  right: 30px;
+  transform: rotate(-135deg);
+}
+
+.gallery {
+  min-height: 100vh;
+  width: min(97.5%, 87.5rem);
+  margin: 10vh auto;
+  gap: 0.5vw;
+  display: grid;
+  grid-template-columns: 1fr 4rem 1fr;
+  grid-template-rows: 370px auto 1fr;
+  grid-template-areas: "art__1 pic__1 pic__1" "pic__2 pic__2 pic__3" "pic__2 pic__2 art__2";
+}
+.gallery picture img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.gallery article:nth-child(1) {
+  grid-area: art__1;
+  border: 1px solid silver;
+}
+.gallery article:nth-child(1),
+.gallery article:nth-child(5) {
+  padding: 5px 5px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 775px;
+}
+.gallery article:nth-child(1) h2 span,
+.gallery article:nth-child(5) h2 span {
+  display: block;
+  font-size: clamp(36px, 3.5vw, 70px + 0.5vw);
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.gallery article:nth-child(1) p,
+.gallery article:nth-child(5) p {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: clamp(17px, 3vw, 20px + 0.5vw);
+  max-width: 80%;
+  letter-spacing: 1.3px;
+  line-height: 45px;
+  margin-top: 0.5vh;
+}
+.gallery picture:nth-child(2) {
+  grid-column: 2/end;
+  grid-area: pic__1;
+}
+.gallery picture:nth-child(3) {
+  grid-column: 1/3;
+  grid-row: 2/end;
+  grid-area: pic__2;
+}
+.gallery picture:nth-child(4) {
+  grid-column: 3/end;
+  grid-row: 2/3;
+  grid-area: pic__3;
+}
+.gallery article:nth-child(5) {
+  color: #ffffff;
+  background-color: #151515;
+  grid-area: art__2;
+  /*make a note of this use of negative 
+  margins as this is a genius way of make 
+  a grid element take up the desired amount of space
+      margin-right: -0.5vw; 
+  margin-bottom: -0.5vw;
+  */
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+  min-height: 150px;
+}
+footer a img {
+  scale: 1.3;
+}
+footer p {
+  font-size: clamp(12px, 3.5vw, 22px);
+  color: #ffffff;
+  text-align: center;
+  width: max(30%, 480px);
+  margin-inline: auto;
+  font-family: "Outfit", sans-serif;
+}
+footer .social__links a:nth-child(2) {
+  margin: 0 20px;
+}
+footer .social__links a img {
+  scale: 1.2;
+}
+footer .social__links a img:hover {
+  scale: 1.6;
+  cursor: pointer;
+}
+
+/* tablet + mobile only styles*/
+@media only screen and (max-width: 1023px) {
+  main .relative__title__left h1 {
+    color: black;
+    background: none;
+    mix-blend-mode: normal;
+    -webkit-text-fill-color: black;
+  }
+}
+/* tablet only styles*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body .hero {
+    justify-content: start;
+  }
+  body .hero picture {
+    width: 50%;
+  }
+  main .relative__title__left {
+    left: 45%;
+    min-width: 367px;
+    top: calc(150px + 10.5vh);
+  }
+  main .relative__title__right {
+    top: calc(440px + 5vw + 1vh);
+    left: 45%;
+    right: 20%;
+  }
+  body footer p {
+    line-height: calc(20px + 1vw);
+    margin-top: 12.5px;
+    font-size: clamp(14px, 3.5vw, 18px);
+    width: 100%;
+    max-width: 320px;
+  }
+}
+.location__header .location__btn__wrapper {
+  position: fixed;
+  top: 0;
+  left: 100px;
+}
+.location__header .location__btn__wrapper .location__btn {
+  width: 240px;
+  height: 60px;
+  font-family: "Big Shoulders Display", sans-serif;
+  padding: 15px 10px 10px 10px;
+  font-size: 25.5px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #151515;
+  color: #ffffff;
+  letter-spacing: 3.2px;
+  font-weight: 600;
+}
+.location__header .location__btn__wrapper .location__btn:hover {
+  cursor: pointer;
+}
+.location__header .location__btn__wrapper .location__btn:hover span {
+  background-color: rgb(255, 207, 136);
+}
+.location__header .location__btn__wrapper .location__btn span {
+  position: relative;
+  display: block;
+  top: -45px;
+  left: -70px;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(213, 150, 108);
+}
+.location__header .location__btn__wrapper .location__btn span::before {
+  position: absolute;
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  content: "";
+  top: 10px;
+  right: 30px;
+  transform: rotate(45deg);
+}
+.location__header .location__btn__wrapper .location__btn span::after {
+  position: absolute;
+  width: 3px;
+  height: 24px;
+  background-color: white;
+  content: "";
+  top: 25px;
+  right: 30px;
+  transform: rotate(135deg);
+}
+.location__header picture img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+
+.location__main {
+  min-height: 350px;
+  background-color: #151515;
+  padding: calc(45px + 1vw) 0;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  /* closing section*/
+}
+.location__main section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "h1__a art__a";
+  max-width: 90%;
+  margin-inline: auto;
+  padding: 20px;
+  /* closing article*/
+}
+.location__main section h1 {
+  grid-area: h1__a;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(56px, 3.5vw, 70px + 0.5vw);
+}
+.location__main section h1 span {
+  display: block;
+}
+.location__main section article {
+  grid-area: art__a;
+}
+.location__main section article h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: clamp(28px, 4vw, 36px + 1vw);
+  text-transform: uppercase;
+  color: rgb(213, 150, 108);
+  font-weight: 700;
+}
+.location__main section article ul, .location__main section article p {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: clamp(12px, 3vw, 16px + 0.5vw);
+}
+.location__main section article ul li:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.location__main section article ul p:nth-child(3) {
+  margin-top: 25px;
+  color: pink;
+}
+
+/*closing location__main */
+.location__footer {
+  background-color: rgb(213, 150, 108);
+}
+.location__footer p {
+  color: #151515;
+}
+.location__footer .social__links a img {
+  filter: invert(100%);
+  /* new piece of code here*/
+}/*# sourceMappingURL=main.css.map */
