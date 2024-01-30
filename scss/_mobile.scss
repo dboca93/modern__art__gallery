@@ -1,5 +1,6 @@
 @media only screen and (max-width: 768px) {
   body {
+
     .hero {
       height: auto;
       min-height: fit-content;
@@ -15,7 +16,7 @@
           height: auto;
         }
       }
-    }
+    } /* closes hero*/
 
     main {
       display: grid;
@@ -62,7 +63,7 @@
           "pic__3"
           "art__2";
       }
-    }
+    } /* closes main*/
 
     footer {
         height: auto;
@@ -91,11 +92,46 @@
                 scale: 1; 
             }
         }
-    }
+    } /* closes footer*/
 
+    /* the following code 
+    is to fix an issue with the span
+    moving on mobile devices.*/
     .location__header  {
       .location__btn__wrapper {
         left: 60px; 
+
+        .location__btn {
+          position: relative;
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            height: 5px; 
+            width: 60px; 
+            background-color: $beige; 
+            transform: rotate(180deg);
+
+            top: 0px; 
+            left: -60px;
+            z-index: 1; 
+          }
+
+          &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            height: 5px; 
+            width: 60px; 
+            background-color: transparent;
+            outline: 1px solid black; 
+            transform: rotate(180deg);
+            top: 60px; 
+            left: -60px;
+            z-index: 999; 
+          }
+    
+        }
       }
     }
 
@@ -127,5 +163,6 @@
     .location__footer {
       min-height: 260px;
     }
-  }
-}
+
+  } /* closes body*/
+} /*closes total media query*/

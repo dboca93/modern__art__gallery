@@ -118,6 +118,14 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    /* closes hero*/
+    /* closes main*/
+    /* closes footer*/
+    /* the following code 
+    is to fix an issue with the span
+    moving on mobile devices.*/
+  }
   body .hero {
     height: auto;
     min-height: -moz-fit-content;
@@ -193,6 +201,34 @@ body {
   body .location__header .location__btn__wrapper {
     left: 60px;
   }
+  body .location__header .location__btn__wrapper .location__btn {
+    position: relative;
+  }
+  body .location__header .location__btn__wrapper .location__btn::before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 60px;
+    background-color: rgb(213, 150, 108);
+    transform: rotate(180deg);
+    top: 0px;
+    left: -60px;
+    z-index: 1;
+  }
+  body .location__header .location__btn__wrapper .location__btn::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 60px;
+    background-color: transparent;
+    outline: 1px solid black;
+    transform: rotate(180deg);
+    top: 60px;
+    left: -60px;
+    z-index: 999;
+  }
   body .location__main {
     width: 100%;
     padding: calc(50px + 1vw) 0;
@@ -215,7 +251,8 @@ body {
   body .location__footer {
     min-height: 260px;
   }
-}
+  /* closes body*/
+} /*closes total media query*/
 .hero {
   height: 100vh;
   min-height: 800px;
