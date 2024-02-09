@@ -21,7 +21,6 @@
     img {
       width: 100%;
       height: 100%; 
-
       object-fit: cover; 
       display: block;
     }
@@ -51,7 +50,6 @@
 
     span {
       font-size: clamp(68px, 7vw, calc(112px + 1vw));
-
       font-weight: bold;
       font-family: $font__big;
       text-transform: uppercase;
@@ -85,6 +83,7 @@
     color: $white__shade;
     letter-spacing: 3.2px;
     font-weight: 600;
+
 
     &:hover {
       cursor: pointer;
