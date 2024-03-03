@@ -1,5 +1,4 @@
 .location__header {
-
   picture {
     img {
       display: block;
@@ -10,11 +9,10 @@
     }
   }
 
-.l__link__container {
+  .l__link__container {
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 6.25rem;
-
     width: 15rem;
     height: 3.4375rem;
     font-family: $font__big;
@@ -24,7 +22,7 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     background-color: $black__shade;
     color: $white__shade;
     letter-spacing: 0.2rem;
@@ -33,7 +31,6 @@
     &:hover {
       cursor: pointer;
       background-color: $beige;
-
 
       .l__link__container__arrow {
         background-color: $black__shade;
@@ -51,11 +48,11 @@
 
     .l__link__container__arrow {
       width: 20.5%;
-      background: $beige; 
+      background: $beige;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 3.4375rem; 
+      height: 3.4375rem;
       margin-left: auto;
 
       img {
@@ -63,17 +60,12 @@
       }
 
       &:hover {
-        background-color: $gold;
+        background-color: $black__shade;
         cursor: pointer;
       }
     }
-
-      }
+  }
 }
-  
-
-
-
 
 .location__main {
   min-height: 21.875rem;
@@ -84,13 +76,12 @@
   align-items: center;
 
   section {
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "h1__a art__a";
-    max-width: 90%; 
-    margin-inline: auto; 
-    padding: 1.25rem; 
+    grid-template-areas: "h1__a art__a";
+    max-width: 90%;
+    margin-inline: auto;
+    padding: 1.25rem;
 
     h1 {
       grid-area: h1__a;
@@ -112,49 +103,46 @@
         font-family: $font__big;
         font-size: clamp(1.75rem, 4vw, calc(2.25rem + 1vw));
         text-transform: uppercase;
-        color: $beige; 
+        color: $beige;
         font-weight: 700;
-
       }
 
-      ul, p {
+      ul,
+      p {
         display: flex;
         align-items: start;
         flex-direction: column;
-        font-family: $font__outfit; 
+        font-family: $font__outfit;
         margin-top: 0.625rem;
         color: $white__shade;
         font-size: clamp(0.75rem, 3vw, calc(1rem + 0.5vw));
-        
-        }
-
-        ul {
-          li:nth-child(2) {
-            margin-top: 0.3125rem; 
-            margin-bottom: 0.3125rem;  
-        }
-      
-
-      p:nth-child(3) {
-        margin-top: 1.5625rem; 
-        color: pink;
       }
-    
-  } 
-} 
-} 
+
+      ul {
+        li:nth-child(2) {
+          margin-top: 0.3125rem;
+          margin-bottom: 0.3125rem;
+        }
+
+        p:nth-child(3) {
+          margin-top: 1.5625rem;
+          color: pink;
+        }
+      }
+    }
+  }
 }
 
 .location__footer {
   background-color: $beige;
-  
+
   p {
-    color: $black__shade; 
+    color: $black__shade;
   }
 
   .social__links {
-      a img {
-        filter: invert(100%);
-      }
+    a img {
+      filter: invert(100%);
+    }
   }
 }

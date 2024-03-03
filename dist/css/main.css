@@ -493,7 +493,7 @@ footer .social__links a img:hover {
   scale: 1.2;
 }
 .location__header .l__link__container .l__link__container__arrow:hover {
-  background-color: rgb(255, 207, 136);
+  background-color: #151515;
   cursor: pointer;
 }
 
@@ -534,7 +534,8 @@ footer .social__links a img:hover {
   color: rgb(213, 150, 108);
   font-weight: 700;
 }
-.location__main section article ul, .location__main section article p {
+.location__main section article ul,
+.location__main section article p {
   display: flex;
   align-items: start;
   flex-direction: column;
