@@ -25,7 +25,7 @@ filter: invert(100%);
 **The tricky h1 in the hero**
 
 2. First, the container positioning the h1 takes the 33% from 
-the left pane of page as its middle point. Then we styled from there. 
+the left pane of page as its middle point. Then I styled from there. 
 The unique combination of background-clip, and transparent text means 
 that the text absorbs the colors colors of the h1's linear gradient; 
 without that linear-gradient actually styling the background. 
