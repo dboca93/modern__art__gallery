@@ -1,6 +1,3 @@
-
-
-
 .hero {
   height: 100vh;
   min-height: 800px;
@@ -20,8 +17,8 @@
 
     img {
       width: 100%;
-      height: 100%; 
-      object-fit: cover; 
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
   }
@@ -30,18 +27,16 @@
 .relative__title__left {
   position: absolute;
   top: 170px;
-  right: 57%; 
+  right: 57%;
   left: 23.35%;
   height: fit-content;
   display: flex;
   flex-direction: row;
 
   h1 {
-    background: linear-gradient(90deg,
-    $white__shade 50%,
-    $black__shade 50%);
+    background: linear-gradient(90deg, $white__shade 50%, $black__shade 50%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     color: transparent;
 
     span:nth-child(1) {
@@ -68,22 +63,22 @@
     font-size: clamp(12px, 3.5vw, calc(17px + 0.5vw));
   }
 
-  .btn {
+  .i__link__container {
     margin-top: calc(40px + 1vw);
     width: 240px;
-    height: 60px;
+    height: 55px;
     font-family: $font__big;
-    padding: 15px 10px 10px 10px;
     font-size: 25.5px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
     background-color: $black__shade;
     color: $white__shade;
     letter-spacing: 3.2px;
     font-weight: 600;
-
 
     &:hover {
       cursor: pointer;
@@ -91,46 +86,55 @@
       span {
         background-color: $gold;
       }
+
+      .i__link__container__arrow {
+        background-color: $gold;
+      }
     }
 
-    span {
-      height: 60px;
-      width: 60px;
-      background-color: $beige;
-      top: -45px;
-      right: -230px;
-      bottom: 0;
-      position: relative;
-      content: "";
-      display: block;
+    .i__link__container__text {
+      text-align: center;
+      margin-left: auto;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .i__link__container__arrow {
+      width: 20.5%;
+      background: #c4a484;
+
+      height: 55px; 
+      margin-left: auto;
 
       &:hover {
-        background-color: $gold; 
+        background-color: $gold;
         cursor: pointer;
       }
 
       &::before {
-        position: absolute;
-        width: 3px;
-        height: 24px;
-        background-color: white;
+        position: relative;
         content: "";
         display: block;
-        top: 10px;
-        right: 30px;
-        transform: rotate(-45deg);
+        width: 25px;
+        height: 4px;
+        transform: rotate(40deg);
+        background: white;
+        top: 18.5px;
+        left: 11px;
       }
 
       &::after {
-        position: absolute;
-        width: 3px;
-        height: 24px;
-        background-color: white;
+        position: relative;
         content: "";
         display: block;
-        top: 25px;
-        right: 30px;
-        transform: rotate(-135deg);
+        width: 25px;
+        height: 4px;
+        transform: rotate(140deg);
+        background: white;
+        top: 28px;
+        left: 10px;
       }
     }
   }

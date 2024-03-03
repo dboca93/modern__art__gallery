@@ -294,64 +294,70 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: clamp(12px, 3.5vw, 17px + 0.5vw);
 }
-.relative__title__right .btn {
+.relative__title__right .i__link__container {
   margin-top: calc(40px + 1vw);
   width: 240px;
-  height: 60px;
+  height: 55px;
   font-family: "Big Shoulders Display", sans-serif;
-  padding: 15px 10px 10px 10px;
   font-size: 25.5px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #151515;
   color: #ffffff;
   letter-spacing: 3.2px;
   font-weight: 600;
 }
-.relative__title__right .btn:hover {
+.relative__title__right .i__link__container:hover {
   cursor: pointer;
 }
-.relative__title__right .btn:hover span {
+.relative__title__right .i__link__container:hover span {
   background-color: rgb(255, 207, 136);
 }
-.relative__title__right .btn span {
-  height: 60px;
-  width: 60px;
-  background-color: rgb(213, 150, 108);
-  top: -45px;
-  right: -230px;
-  bottom: 0;
+.relative__title__right .i__link__container:hover .i__link__container__arrow {
+  background-color: rgb(255, 207, 136);
+}
+.relative__title__right .i__link__container .i__link__container__text {
+  text-align: center;
+  margin-left: auto;
+}
+.relative__title__right .i__link__container .i__link__container__text a {
+  text-decoration: none;
+}
+.relative__title__right .i__link__container .i__link__container__arrow {
+  width: 20.5%;
+  background: #c4a484;
+  height: 55px;
+  margin-left: auto;
+}
+.relative__title__right .i__link__container .i__link__container__arrow:hover {
+  background-color: rgb(255, 207, 136);
+  cursor: pointer;
+}
+.relative__title__right .i__link__container .i__link__container__arrow::before {
   position: relative;
   content: "";
   display: block;
+  width: 25px;
+  height: 4px;
+  transform: rotate(40deg);
+  background: white;
+  top: 18.5px;
+  left: 11px;
 }
-.relative__title__right .btn span:hover {
-  background-color: rgb(255, 207, 136);
-  cursor: pointer;
-}
-.relative__title__right .btn span::before {
-  position: absolute;
-  width: 3px;
-  height: 24px;
-  background-color: white;
+.relative__title__right .i__link__container .i__link__container__arrow::after {
+  position: relative;
   content: "";
   display: block;
-  top: 10px;
-  right: 30px;
-  transform: rotate(-45deg);
-}
-.relative__title__right .btn span::after {
-  position: absolute;
-  width: 3px;
-  height: 24px;
-  background-color: white;
-  content: "";
-  display: block;
-  top: 25px;
-  right: 30px;
-  transform: rotate(-135deg);
+  width: 25px;
+  height: 4px;
+  transform: rotate(140deg);
+  background: white;
+  top: 28px;
+  left: 10px;
 }
 
 .gallery {
@@ -452,66 +458,80 @@ footer .social__links a img:hover {
   cursor: pointer;
 }
 
-.location__header .location__btn__wrapper {
+.location__header .l__link__container {
   position: fixed;
   top: 0;
   left: 100px;
-}
-.location__header .location__btn__wrapper .location__btn {
   width: 240px;
-  height: 60px;
+  height: 55px;
   font-family: "Big Shoulders Display", sans-serif;
-  padding: 15px 10px 10px 10px;
   font-size: 25.5px;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #151515;
   color: #ffffff;
   letter-spacing: 3.2px;
   font-weight: 600;
 }
-.location__header .location__btn__wrapper .location__btn:hover {
+.location__header .l__link__container:hover {
   cursor: pointer;
 }
-.location__header .location__btn__wrapper .location__btn:hover span {
+.location__header .l__link__container:hover span {
   background-color: rgb(255, 207, 136);
 }
-.location__header .location__btn__wrapper .location__btn span {
+.location__header .l__link__container:hover .l__link__container__arrow {
+  background-color: rgb(255, 207, 136);
+}
+.location__header .l__link__container .l__link__container__text {
+  text-align: center;
+  margin-left: auto;
+}
+.location__header .l__link__container .l__link__container__text a {
+  text-decoration: none;
+}
+.location__header .l__link__container .l__link__container__arrow {
+  width: 20.5%;
+  background: #c4a484;
+  height: 55px;
+  margin-left: auto;
+}
+.location__header .l__link__container .l__link__container__arrow:hover {
+  background-color: rgb(255, 207, 136);
+  cursor: pointer;
+}
+.location__header .l__link__container .l__link__container__arrow::before {
   position: relative;
+  content: "";
   display: block;
-  top: -47px;
-  left: -70px;
-  height: 62px;
-  width: 60px;
-  background-color: rgb(213, 150, 108);
+  width: 25px;
+  height: 4px;
+  transform: rotate(40deg);
+  background: white;
+  top: 18.5px;
+  left: 11px;
 }
-.location__header .location__btn__wrapper .location__btn span::before {
-  position: absolute;
-  width: 3px;
-  height: 24px;
-  background-color: white;
+.location__header .l__link__container .l__link__container__arrow::after {
+  position: relative;
   content: "";
-  top: 10px;
-  right: 30px;
-  transform: rotate(45deg);
+  display: block;
+  width: 25px;
+  height: 4px;
+  transform: rotate(140deg);
+  background: white;
+  top: 28px;
+  left: 10px;
 }
-.location__header .location__btn__wrapper .location__btn span::after {
-  position: absolute;
-  width: 3px;
-  height: 24px;
-  background-color: white;
-  content: "";
-  top: 25px;
-  right: 30px;
-  transform: rotate(135deg);
-}
-.location__header picture img {
+
+picture img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
-  max-height: 700px;
 }
 
 .location__main {
