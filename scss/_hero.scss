@@ -104,38 +104,44 @@
     .i__link__container__arrow {
       width: 20.5%;
       background: #c4a484;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 55px; 
       margin-left: auto;
+
+      img {
+        scale: 1.2;
+      }
 
       &:hover {
         background-color: $gold;
         cursor: pointer;
       }
 
-      &::before {
-        position: relative;
-        content: "";
-        display: block;
-        width: 25px;
-        height: 4px;
-        transform: rotate(40deg);
-        background: white;
-        top: 18.5px;
-        left: 11px;
-      }
+      // &::before {
+      //   position: relative;
+      //   content: "";
+      //   display: block;
+      //   width: 25px;
+      //   height: 4px;
+      //   transform: rotate(40deg);
+      //   background: white;
+      //   top: 18.5px;
+      //   left: 11px;
+      // }
 
-      &::after {
-        position: relative;
-        content: "";
-        display: block;
-        width: 25px;
-        height: 4px;
-        transform: rotate(140deg);
-        background: white;
-        top: 28px;
-        left: 10px;
-      }
+      // &::after {
+      //   position: relative;
+      //   content: "";
+      //   display: block;
+      //   width: 25px;
+      //   height: 4px;
+      //   transform: rotate(140deg);
+      //   background: white;
+      //   top: 28px;
+      //   left: 10px;
+      // }
     }
   }
 }

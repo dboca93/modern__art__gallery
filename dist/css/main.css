@@ -179,6 +179,9 @@ body {
   body footer .social__links a img {
     scale: 1;
   }
+  body .location__header .l__link__container {
+    left: 0;
+  }
   body .location__main {
     width: 100%;
     padding: calc(50px + 1vw) 0;
@@ -330,34 +333,18 @@ body {
 .relative__title__right .i__link__container .i__link__container__arrow {
   width: 20.5%;
   background: #c4a484;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 55px;
   margin-left: auto;
+}
+.relative__title__right .i__link__container .i__link__container__arrow img {
+  scale: 1.2;
 }
 .relative__title__right .i__link__container .i__link__container__arrow:hover {
   background-color: rgb(255, 207, 136);
   cursor: pointer;
-}
-.relative__title__right .i__link__container .i__link__container__arrow::before {
-  position: relative;
-  content: "";
-  display: block;
-  width: 25px;
-  height: 4px;
-  transform: rotate(40deg);
-  background: white;
-  top: 18.5px;
-  left: 11px;
-}
-.relative__title__right .i__link__container .i__link__container__arrow::after {
-  position: relative;
-  content: "";
-  display: block;
-  width: 25px;
-  height: 4px;
-  transform: rotate(140deg);
-  background: white;
-  top: 28px;
-  left: 10px;
 }
 
 .gallery {
@@ -458,6 +445,14 @@ footer .social__links a img:hover {
   cursor: pointer;
 }
 
+.location__header picture img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
 .location__header .l__link__container {
   position: fixed;
   top: 0;
@@ -496,42 +491,18 @@ footer .social__links a img:hover {
 .location__header .l__link__container .l__link__container__arrow {
   width: 20.5%;
   background: #c4a484;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 55px;
   margin-left: auto;
+}
+.location__header .l__link__container .l__link__container__arrow img {
+  scale: 1.2;
 }
 .location__header .l__link__container .l__link__container__arrow:hover {
   background-color: rgb(255, 207, 136);
   cursor: pointer;
-}
-.location__header .l__link__container .l__link__container__arrow::before {
-  position: relative;
-  content: "";
-  display: block;
-  width: 25px;
-  height: 4px;
-  transform: rotate(40deg);
-  background: white;
-  top: 18.5px;
-  left: 11px;
-}
-.location__header .l__link__container .l__link__container__arrow::after {
-  position: relative;
-  content: "";
-  display: block;
-  width: 25px;
-  height: 4px;
-  transform: rotate(140deg);
-  background: white;
-  top: 28px;
-  left: 10px;
-}
-
-picture img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .location__main {
