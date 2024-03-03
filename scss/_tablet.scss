@@ -1,5 +1,5 @@
 /* tablet + mobile only styles*/
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 63.9375em) {
     main {
         .relative__title__left {
             h1 {
@@ -14,7 +14,7 @@
 
 /* tablet only styles*/
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
     body {
         .hero {
             justify-content: start;
@@ -28,12 +28,12 @@
     main {
         .relative__title__left {
             left: 45%; 
-            min-width: 367px;
-            top: calc(150px + 10.5vh); 
+            min-width: 22.9375rem;
+            top: calc(9.375rem + 10.5vh); 
         }
 
         .relative__title__right {
-            top: calc(440px + 5vw + 1vh); 
+            top: calc(27.5rem + 5vw + 1vh); 
             left: 45%; 
             right: 20%; 
         }
@@ -41,11 +41,11 @@
 
     body footer {
         p {
-            line-height: calc(20px + 1vw);
-            margin-top: 12.5px;
-            font-size: clamp(14px, 3.5vw, 18px); 
+            line-height: calc(1.25rem + 1vw);
+            margin-top: 0.7813rem;
+            font-size: clamp(0.875rem, 3.5vw, 1.125rem); 
             width: 100%; 
-            max-width: 320px; 
+            max-width: 20rem; 
         }
     }
 

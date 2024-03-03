@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  min-height: 800px;
+  min-height: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
 
   picture {
     width: 33.5%;
-    min-height: 800px;
+    min-height: 50rem;
     height: 100%;
 
     img {
@@ -26,7 +26,7 @@
 
 .relative__title__left {
   position: absolute;
-  top: 170px;
+ top: 10.625rem; 
   right: 57%;
   left: 23.35%;
   height: fit-content;
@@ -34,7 +34,9 @@
   flex-direction: row;
 
   h1 {
-    background: linear-gradient(90deg, $white__shade 50%, $black__shade 50%);
+    background: linear-gradient(90deg, 
+    $white__shade 50%, 
+    $black__shade 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -44,7 +46,7 @@
     }
 
     span {
-      font-size: clamp(68px, 7vw, calc(112px + 1vw));
+      font-size: clamp(4.25rem, 7vw, calc(7rem + 1vw));
       font-weight: bold;
       font-family: $font__big;
       text-transform: uppercase;
@@ -56,19 +58,19 @@
   position: absolute;
   right: calc(17.5% - 0.5vw);
   left: calc(60% - 0.5vw);
-  top: 190.5px;
+  top: 11.9063rem;
 
   p {
     font-family: $font__outfit;
-    font-size: clamp(12px, 3.5vw, calc(17px + 0.5vw));
+    font-size: clamp(0.75rem, 3.5vw, calc(1.0625rem + 0.5vw));
   }
 
   .i__link__container {
-    margin-top: calc(40px + 1vw);
-    width: 240px;
-    height: 55px;
+    margin-top: calc(2.5rem + 1vw);
+    width: 15rem;
+    height: 3.4375rem;
     font-family: $font__big;
-    font-size: 25.5px;
+    font-size: 1.5938rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -77,7 +79,7 @@
     justify-content: space-between; 
     background-color: $black__shade;
     color: $white__shade;
-    letter-spacing: 3.2px;
+    letter-spacing: 0.2rem;
     font-weight: 600;
 
     &:hover {
@@ -104,7 +106,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 55px; 
+      height: 3.4375rem; 
       margin-left: auto;
 
       img {

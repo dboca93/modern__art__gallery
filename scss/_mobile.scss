@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48em) {
   body {
 
     .hero {
@@ -33,13 +33,13 @@
           width: 100%;
           padding: 4% 3%;
           text-align: justify;
-          border-top: 1px solid silver;
-          border-bottom: 1px solid silver;
+          border-top: 0.0625rem solid silver;
+          border-bottom: 0.0625rem solid silver;
         }
 
         button {
           margin-left: 2.5%;
-          margin-top: 25px;
+          margin-top: 1.5625rem;
         }
       }
 
@@ -47,7 +47,7 @@
         padding: 4% 3%;
 
         h1 span {
-          font-size: clamp(52px, 5vw, 80px + 3vw);
+          font-size: clamp(3.25rem, 5vw, 5rem + 3vw);
         }
       }
 
@@ -69,7 +69,7 @@
         height: auto;
         flex-direction: column;
         align-items: start;
-        padding: 25px 25px;  
+        padding: 1.5625rem 1.5625rem;  
 
         a img {
             scale: 1; 
@@ -78,11 +78,11 @@
         p {
             width: 100%;
             text-align: start;
-            margin: 25px auto; 
+            margin: 1.5625rem auto; 
         }
         
         .social__links {
-            width: 200px;
+            width: 12.5rem;
 
             a img {
                 scale: 1; 
@@ -96,11 +96,11 @@
 
     .location__main {
       width: 100%;
-      padding: calc(50px + 1vw) 0;
+      padding: calc(3.125rem + 1vw) 0;
       height: fit-content;
 
       section {
-      padding: 0 25px;
+      padding: 0 1.5625rem;
       max-width: unset;
         width: 100%; 
         grid-template-areas: 
@@ -110,17 +110,17 @@
 
         article {
           h2 {
-            margin: 15px 0; 
+            margin: 0.9375rem 0; 
           }
           p:nth-child(3) {
-            margin-top: 15px;
+            margin-top: 0.9375rem;
           }
         }
       }
     }
 
     .location__footer {
-      min-height: 260px;
+      min-height: 16.25rem;
     }
 
   } 

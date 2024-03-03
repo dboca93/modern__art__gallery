@@ -105,12 +105,12 @@ meter {
 
 body {
   overflow-x: hidden;
-  min-width: 310px;
+  min-width: 19.375rem;
   max-width: 100vw;
   min-height: 100vh;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48em) {
   body .hero {
     height: auto;
     min-height: -moz-fit-content;
@@ -139,18 +139,18 @@ body {
     width: 100%;
     padding: 4% 3%;
     text-align: justify;
-    border-top: 1px solid silver;
-    border-bottom: 1px solid silver;
+    border-top: 0.0625rem solid silver;
+    border-bottom: 0.0625rem solid silver;
   }
   body main .relative__title__right button {
     margin-left: 2.5%;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
   }
   body main .relative__title__left {
     padding: 4% 3%;
   }
   body main .relative__title__left h1 span {
-    font-size: clamp(52px, 5vw, 80px + 3vw);
+    font-size: clamp(3.25rem, 5vw, 5rem + 3vw);
   }
   body main .gallery {
     margin: 5vh auto;
@@ -163,7 +163,7 @@ body {
     height: auto;
     flex-direction: column;
     align-items: start;
-    padding: 25px 25px;
+    padding: 1.5625rem 1.5625rem;
   }
   body footer a img {
     scale: 1;
@@ -171,10 +171,10 @@ body {
   body footer p {
     width: 100%;
     text-align: start;
-    margin: 25px auto;
+    margin: 1.5625rem auto;
   }
   body footer .social__links {
-    width: 200px;
+    width: 12.5rem;
   }
   body footer .social__links a img {
     scale: 1;
@@ -184,29 +184,29 @@ body {
   }
   body .location__main {
     width: 100%;
-    padding: calc(50px + 1vw) 0;
+    padding: calc(3.125rem + 1vw) 0;
     height: -moz-fit-content;
     height: fit-content;
   }
   body .location__main section {
-    padding: 0 25px;
+    padding: 0 1.5625rem;
     max-width: unset;
     width: 100%;
     grid-template-areas: "h1__a" "art__a";
     grid-template-columns: 1fr;
   }
   body .location__main section article h2 {
-    margin: 15px 0;
+    margin: 0.9375rem 0;
   }
   body .location__main section article p:nth-child(3) {
-    margin-top: 15px;
+    margin-top: 0.9375rem;
   }
   body .location__footer {
-    min-height: 260px;
+    min-height: 16.25rem;
   }
 }
 /* tablet + mobile only styles*/
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 63.9375em) {
   main .relative__title__left h1 {
     color: black;
     background: none;
@@ -215,7 +215,7 @@ body {
   }
 }
 /* tablet only styles*/
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   body .hero {
     justify-content: start;
   }
@@ -224,25 +224,25 @@ body {
   }
   main .relative__title__left {
     left: 45%;
-    min-width: 367px;
-    top: calc(150px + 10.5vh);
+    min-width: 22.9375rem;
+    top: calc(9.375rem + 10.5vh);
   }
   main .relative__title__right {
-    top: calc(440px + 5vw + 1vh);
+    top: calc(27.5rem + 5vw + 1vh);
     left: 45%;
     right: 20%;
   }
   body footer p {
-    line-height: calc(20px + 1vw);
-    margin-top: 12.5px;
-    font-size: clamp(14px, 3.5vw, 18px);
+    line-height: calc(1.25rem + 1vw);
+    margin-top: 0.7813rem;
+    font-size: clamp(0.875rem, 3.5vw, 1.125rem);
     width: 100%;
-    max-width: 320px;
+    max-width: 20rem;
   }
 }
 .hero {
   height: 100vh;
-  min-height: 800px;
+  min-height: 50rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +250,7 @@ body {
 }
 .hero picture {
   width: 33.5%;
-  min-height: 800px;
+  min-height: 50rem;
   height: 100%;
 }
 .hero picture img {
@@ -263,7 +263,7 @@ body {
 
 .relative__title__left {
   position: absolute;
-  top: 170px;
+  top: 10.625rem;
   right: 57%;
   left: 23.35%;
   height: -moz-fit-content;
@@ -281,7 +281,7 @@ body {
   display: block;
 }
 .relative__title__left h1 span {
-  font-size: clamp(68px, 7vw, 112px + 1vw);
+  font-size: clamp(4.25rem, 7vw, 7rem + 1vw);
   font-weight: bold;
   font-family: "Big Shoulders Display", sans-serif;
   text-transform: uppercase;
@@ -291,18 +291,18 @@ body {
   position: absolute;
   right: calc(17.5% - 0.5vw);
   left: calc(60% - 0.5vw);
-  top: 190.5px;
+  top: 11.9063rem;
 }
 .relative__title__right p {
   font-family: "Outfit", sans-serif;
-  font-size: clamp(12px, 3.5vw, 17px + 0.5vw);
+  font-size: clamp(0.75rem, 3.5vw, 1.0625rem + 0.5vw);
 }
 .relative__title__right .i__link__container {
-  margin-top: calc(40px + 1vw);
-  width: 240px;
-  height: 55px;
+  margin-top: calc(2.5rem + 1vw);
+  width: 15rem;
+  height: 3.4375rem;
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: 25.5px;
+  font-size: 1.5938rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -311,7 +311,7 @@ body {
   justify-content: space-between;
   background-color: #151515;
   color: #ffffff;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.2rem;
   font-weight: 600;
 }
 .relative__title__right .i__link__container:hover {
@@ -334,7 +334,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 55px;
+  height: 3.4375rem;
   margin-left: auto;
 }
 .relative__title__right .i__link__container .i__link__container__arrow img {
@@ -348,7 +348,7 @@ body {
   gap: 0.5vw;
   display: grid;
   grid-template-columns: 1fr 4rem 1fr;
-  grid-template-rows: 370px auto 1fr;
+  grid-template-rows: 23.125rem auto 1fr;
   grid-template-areas: "art__1 pic__1 pic__1" "pic__2 pic__2 pic__3" "pic__2 pic__2 art__2";
 }
 .gallery picture img {
@@ -360,20 +360,20 @@ body {
 }
 .gallery article:nth-child(1) {
   grid-area: art__1;
-  border: 1px solid silver;
+  border: 0.0625rem solid silver;
 }
 .gallery article:nth-child(1),
 .gallery article:nth-child(5) {
-  padding: 5px 5px 5px 15px;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 775px;
+  max-width: 48.4375rem;
 }
 .gallery article:nth-child(1) h2 span,
 .gallery article:nth-child(5) h2 span {
   display: block;
-  font-size: clamp(36px, 3.5vw, 70px + 0.5vw);
+  font-size: clamp(2.25rem, 3.5vw, 4.375rem + 0.5vw);
   font-family: "Big Shoulders Display", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -381,10 +381,10 @@ body {
 .gallery article:nth-child(1) p,
 .gallery article:nth-child(5) p {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(17px, 3vw, 20px + 0.5vw);
+  font-size: clamp(1.0625rem, 3vw, 1.25rem + 0.5vw);
   max-width: 80%;
-  letter-spacing: 1.3px;
-  line-height: 45px;
+  letter-spacing: 0.0813rem;
+  line-height: 2.8125rem;
   margin-top: 0.5vh;
 }
 .gallery picture:nth-child(2) {
@@ -415,21 +415,21 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 0 5vw;
-  min-height: 150px;
+  min-height: 9.375rem;
 }
 footer a img {
   scale: 1.3;
 }
 footer p {
-  font-size: clamp(12px, 3.5vw, 22px);
+  font-size: clamp(0.75rem, 3.5vw, 1.375rem);
   color: #ffffff;
   text-align: center;
-  width: max(30%, 480px);
+  width: max(30%, 30rem);
   margin-inline: auto;
   font-family: "Outfit", sans-serif;
 }
 footer .social__links a:nth-child(2) {
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
 footer .social__links a img {
   scale: 1.2;
@@ -445,16 +445,16 @@ footer .social__links a img:hover {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  max-height: 700px;
+  max-height: 37.5rem;
 }
 .location__header .l__link__container {
   position: fixed;
   top: 0;
-  left: 100px;
-  width: 240px;
-  height: 55px;
+  left: 6.25rem;
+  width: 15rem;
+  height: 3.4375rem;
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: 25.5px;
+  font-size: 1.5938rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -463,7 +463,7 @@ footer .social__links a img:hover {
   justify-content: space-between;
   background-color: #151515;
   color: #ffffff;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.2rem;
   font-weight: 600;
 }
 .location__header .l__link__container:hover {
@@ -486,7 +486,7 @@ footer .social__links a img:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 55px;
+  height: 3.4375rem;
   margin-left: auto;
 }
 .location__header .l__link__container .l__link__container__arrow img {
@@ -498,9 +498,9 @@ footer .social__links a img:hover {
 }
 
 .location__main {
-  min-height: 350px;
+  min-height: 21.875rem;
   background-color: #151515;
-  padding: calc(45px + 1vw) 0;
+  padding: calc(2.8125rem + 1vw) 0;
   height: 45vh;
   display: flex;
   align-items: center;
@@ -511,7 +511,7 @@ footer .social__links a img:hover {
   grid-template-areas: "h1__a art__a";
   max-width: 90%;
   margin-inline: auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 .location__main section h1 {
   grid-area: h1__a;
@@ -519,7 +519,7 @@ footer .social__links a img:hover {
   font-family: "Big Shoulders Display", sans-serif;
   font-weight: 700;
   color: #ffffff;
-  font-size: clamp(56px, 3.5vw, 70px + 0.5vw);
+  font-size: clamp(3.5rem, 3.5vw, 4.375rem + 0.5vw);
 }
 .location__main section h1 span {
   display: block;
@@ -529,7 +529,7 @@ footer .social__links a img:hover {
 }
 .location__main section article h2 {
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: clamp(28px, 4vw, 36px + 1vw);
+  font-size: clamp(1.75rem, 4vw, 2.25rem + 1vw);
   text-transform: uppercase;
   color: rgb(213, 150, 108);
   font-weight: 700;
@@ -539,16 +539,16 @@ footer .social__links a img:hover {
   align-items: start;
   flex-direction: column;
   font-family: "Outfit", sans-serif;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   color: #ffffff;
-  font-size: clamp(12px, 3vw, 16px + 0.5vw);
+  font-size: clamp(0.75rem, 3vw, 1rem + 0.5vw);
 }
 .location__main section article ul li:nth-child(2) {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
 }
 .location__main section article ul p:nth-child(3) {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   color: pink;
 }
 

@@ -6,19 +6,19 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      max-height: 700px;
+      max-height: 37.5rem;
     }
   }
 
 .l__link__container {
     position: fixed;
     top: 0; 
-    left: 100px;
+    left: 6.25rem;
 
-    width: 240px;
-    height: 55px;
+    width: 15rem;
+    height: 3.4375rem;
     font-family: $font__big;
-    font-size: 25.5px;
+    font-size: 1.5938rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -27,7 +27,7 @@
     justify-content: space-between; 
     background-color: $black__shade;
     color: $white__shade;
-    letter-spacing: 3.2px;
+    letter-spacing: 0.2rem;
     font-weight: 600;
 
     &:hover {
@@ -55,7 +55,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 55px; 
+      height: 3.4375rem; 
       margin-left: auto;
 
       img {
@@ -76,9 +76,9 @@
 
 
 .location__main {
-  min-height: 350px;
+  min-height: 21.875rem;
   background-color: $black__shade;
-  padding: calc(45px + 1vw) 0;
+  padding: calc(2.8125rem + 1vw) 0;
   height: 45vh;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@
     "h1__a art__a";
     max-width: 90%; 
     margin-inline: auto; 
-    padding: 20px; 
+    padding: 1.25rem; 
 
     h1 {
       grid-area: h1__a;
@@ -98,7 +98,7 @@
       font-family: $font__big;
       font-weight: 700;
       color: $white__shade;
-      font-size: clamp(56px, 3.5vw, calc(70px + 0.5vw));
+      font-size: clamp(3.5rem, 3.5vw, calc(4.375rem + 0.5vw));
 
       span {
         display: block;
@@ -110,7 +110,7 @@
 
       h2 {
         font-family: $font__big;
-        font-size: clamp(28px, 4vw, calc(36px + 1vw));
+        font-size: clamp(1.75rem, 4vw, calc(2.25rem + 1vw));
         text-transform: uppercase;
         color: $beige; 
         font-weight: 700;
@@ -122,21 +122,21 @@
         align-items: start;
         flex-direction: column;
         font-family: $font__outfit; 
-        margin-top: 10px;
+        margin-top: 0.625rem;
         color: $white__shade;
-        font-size: clamp(12px, 3vw, calc(16px + 0.5vw));
+        font-size: clamp(0.75rem, 3vw, calc(1rem + 0.5vw));
         
         }
 
         ul {
           li:nth-child(2) {
-            margin-top: 5px; 
-            margin-bottom: 5px;  
+            margin-top: 0.3125rem; 
+            margin-bottom: 0.3125rem;  
         }
       
 
       p:nth-child(3) {
-        margin-top: 25px; 
+        margin-top: 1.5625rem; 
         color: pink;
       }
     
